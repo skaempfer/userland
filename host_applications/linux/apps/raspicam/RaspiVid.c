@@ -1455,7 +1455,7 @@ static MMAL_STATUS_T create_camera_component(RASPIVID_STATE *state)
          .stills_yuv422 = 0,
          .one_shot_stills = 0,
          .max_preview_video_w = state->width,
-         .max_preview_video_h = state->height,
+         .max_preview_video_h = state->height * 4,
          .num_preview_video_frames = 3 + vcos_max(0, (state->framerate-30)/10),
          .stills_capture_circular_buffer_height = 0,
          .fast_preview_resume = 0,
